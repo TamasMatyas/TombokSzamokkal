@@ -18,9 +18,34 @@
 
 
         }
+        static void OsszegzesTetel()
+        {
+            int osszeg = 0;
+            foreach (int item in tomb)
+            {
+                osszeg += item;
+            }
+            Console.WriteLine($"A számok összege: {osszeg}");
+
+        }
+        static void MegszamlalasTetel()
+        {
+            int db = 0;
+            foreach (int item in tomb)
+            {
+                if (item < 0)
+                {
+                    db++;
+                }
+            }
+            Console.WriteLine($"Negatív számok a listában: {db}");
+        }
+        //static void 
         static void Main(string[] args)
         {
             Feltolt();
+            //OsszegzesTetel();
+            //MegszamlalasTetel();
         }
     }
 }
