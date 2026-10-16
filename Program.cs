@@ -93,7 +93,7 @@
             //MegszamlalasTetel();
             //EldontesTetel();
             //KeresesTetel();
-            KivalasztasTetel();
+            //KivalasztasTetel();
         }
     }
 }
