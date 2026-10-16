@@ -66,7 +66,7 @@
             }
             if (i < tomb.Length)
             {
-                Console.WriteLine($"A keresett szám a {i}. helyen van.");
+                Console.WriteLine($"A keresett szám a {i+1}. helyen van.");
             }
             else
             {
@@ -75,6 +75,15 @@
         }
         static void KivalasztasTetel()
         {
+            tomb[8] = 10;
+            int i = 0;
+            while(tomb[i] != 10)
+            {
+                i++;
+            }
+            Console.WriteLine($"A keresett szám az {i+1}. helyen van. ");
+
+
 
         }
         static void Main(string[] args)
@@ -83,7 +92,8 @@
             //OsszegzesTetel();
             //MegszamlalasTetel();
             //EldontesTetel();
-            KeresesTetel();
+            //KeresesTetel();
+            KivalasztasTetel();
         }
     }
 }
