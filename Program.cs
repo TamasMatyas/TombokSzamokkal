@@ -6,13 +6,13 @@
         static Random r = new Random();
         static void Feltolt()
         {
-            for (int  i = 0; i < tomb.Length; i++)
+            for (int i = 0; i < tomb.Length; i++)
             {
-                tomb[i] = r.Next(-20,21);
+                tomb[i] = r.Next(-20, 21);
             }
             foreach (int item in tomb)
             {
-                Console.Write(item+ " ");
+                Console.Write(item + " ");
             }
             Console.WriteLine();
 
@@ -40,12 +40,50 @@
             }
             Console.WriteLine($"Negatív számok a listában: {db}");
         }
-        //static void 
+        static void EldontesTetel()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 0 a listában");
+            }
+            else
+            {
+                Console.WriteLine("Nincs 0 a listában");
+            }
+        }
+        static void KeresesTetel()
+        {
+            int keresett = 0;
+            int i = 0;
+            while (i< tomb.Length && tomb[i] != keresett)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine($"A keresett szám a {i}. helyen van.");
+            }
+            else
+            {
+                Console.WriteLine("A keresett szám nicsen a tömben.");
+            }
+        }
+        static void KivalasztasTetel()
+        {
+
+        }
         static void Main(string[] args)
         {
             Feltolt();
             //OsszegzesTetel();
             //MegszamlalasTetel();
+            //EldontesTetel();
+            KeresesTetel();
         }
     }
 }
